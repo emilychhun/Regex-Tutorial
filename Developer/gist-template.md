@@ -1,4 +1,4 @@
-# Regex Tutorial)
+# Regex Tutorial
 Regex is short for regular expression, it is a sequence of characters that specifies a search pattern such as string searching algorithms for find and replace operations on strings or for input. The piece or regex i will be using will be for varyfing an email containing lettes, numbers, characters etc. It is important because some sites require you to have a requirement to meet in order to login, also validate the user login in.
 
 ## Summary
