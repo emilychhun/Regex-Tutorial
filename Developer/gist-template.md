@@ -25,6 +25,23 @@ In regex, anchors are not used to match characters. Rather they match a position
 
 ### Quantifiers
   Quantifiers are used to quantify how many times a part of your regular expression should be repeated.  Every time you want to repeat something in a regex (an individual character, a character class or a sub-expression) you can write a quantifier after it to specify how many times it should be repeated.  The following list shows some examples of the most common quantifiers: ?, *, +, {N}, {,N}, {N,}, {N,M}. For example, the regular expression /\d{4}/ matches a four-digit number. It is the same as /\d\d\d\d/.
+  A quantifire can be greedy or lazy that is explained below.
+
+* `a*a+a?`	-0 or more, 1 or more, 0 or 1
+    * "+" Matches 1 or more of the preceding token.
+    * "*" Matches 0 or more of the preceding token.
+    * "?" Matches 0 or 1 of the preceding token, effectively making it optional.
+    * "?" Makes the preceding quantifier lazy, causing it to match as few characters as possible. By default, quantifiers are greedy, and will match as many characters as possible.
+
+* `a{5}a{2,}`	 -Looks for exactly five, two or more
+* `{2,6}`  	    -forces the input of characters between two & six characters long.
+* `a+?a{2,}?`	 -match as few as possible
+* `ab|cd`	    -match ab or cd
+
+### OR Operator
+
+* `|` Acts like a boolean OR. Matches the expression before or after the |.
+It can operate within a group, or on a whole expression. The patterns will be tested in order. Just as in java will match either set of characters. It will look for this OR that.
 
 ### Character Classes
 Character classes allows you to match  any symbol from a certain character set, and a character set is also called a character class. The best example to describe this is using a phone number being (805) 123-4567 but say a user doesnt type the "()" nor the "-" so you want to be able to match the phone. In my second group string ([\da-z\.-]+) we want to match any decimal digit from 0-9 followed by the character a-z to meet the email requirement, and last by period or hyphen.
