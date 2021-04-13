@@ -21,7 +21,7 @@ Everyone must have filled an online form at some stage, a form usually asks for 
 ## Regex Components
 
 ### Anchors
-Anchors do not match any character, instead they match a position before, after, or between characters. In this case Anchors are at the start of the regex /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ in this case it will be the "^" symbol starting before the regex is matching the begining of the string and the "$" which matching the end of the string the regex pattern is applied to. 
+In regex, anchors are not used to match characters. Rather they match a position i.e. before, after, or between characters. To match start and end of line, we use following anchors: 1. Caret (^) matches the position before the first character in the string. 2. Dollar ($) matches the position right after the last character in the string. This is an anchors:  /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ in this case it will be the "^" symbol starting before the regex is matching the begining of the string and the "$" which matching the end of the string the regex pattern is applied to. 
 
 ### Quantifiers
 Quantifiers specify how many instances of a character, group, or character class must be present in the input for a match to be found. An example of that would be "+" symbol matching min of 1 and a max of inifinity in the first group of string and aswell in the second group of strings. In my exmaple of string its matching/looking for in the first group the accepted criteria of numbers a-z lower case,  numbers 0-9, "underscore _" , ". period", and "- hyphen" allowed. Also {2,6}
