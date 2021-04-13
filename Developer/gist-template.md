@@ -45,6 +45,16 @@ It can operate within a group, or on a whole expression. The patterns will be te
 
 ### Character Classes
 With a “character class”, also called “character set”, you can tell the regex engine to match only one out of several characters. Simply place the characters you want to match between square brackets. If you want to match an a or an e, use [ae]. You could use this in gr[ae]y to match either gray or grey. A character class matches only a single character. gr[ae]y does not match graay, graey or any such thing. The order of the characters inside a character class does not matter. The results are identical.
+The following are additional examples of character classes that are not found in our example:
+* A negated set contains a caret first thing within the square brackets `[^ABC]` and matches any character that is not in the set.
+* A `.` will match any character except line breaks. The `.` in our example actually refer to actually periods, and are not a character class.
+* Match any `[/s/S]` will match any character.
+* Word `/w` will match any word.
+* Not word `/W` will match any character that is not a word.
+* Digit `/d` matches any number.
+* Not digit `/D` will match any character that is not a number.
+* Whitespace `\s` will match any character that leaves whitespace (spaces, tabs, line breaks, etc.).
+* Not whitespace `\S` will match any character that is not a whitespace character.
 
 ### Flags
 Flags are optional parameters that we can add to explain expression to make it search in a differnt way. Meaning "i" can ignore casing, "g" serves to searching to find all matches for a given expression inside a string, instead of stopping at the first match, "s" dotall makes the wild character "." match new lines aswell, "m" makes ^ and $ match the begininng and ending of every single line instead of the begining or ending of a string, "y" makes the expression start its searching from the index indicated in its last index property, and lastly "u" makes the expression assume individual characters as code points, not code units, and match 32 bit characters as well.
