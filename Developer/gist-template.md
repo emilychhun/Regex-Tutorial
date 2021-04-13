@@ -21,7 +21,7 @@ Everyone must have filled an online form at some stage, a form usually asks for 
 ## Regex Components
 
 ### Anchors
-In regex, anchors are not used to match characters. Rather they match a position i.e. before, after, or between characters. To match start and end of line, we use following anchors: 1. Caret (^) matches the position before the first character in the string. 2. Dollar ($) matches the position right after the last character in the string. This is an anchors:  /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ in this case it will be the "^" symbol starting before the regex is matching the begining of the string and the "$" which matching the end of the string the regex pattern is applied to. 
+  In regex, anchors are not used to match characters. Rather they match a position i.e. before, after, or between characters. To match start and end of line, we use following anchors: 1. Caret (^) matches the position before the first character in the string. 2. Dollar ($) matches the position right after the last character in the string. This is an anchors:  /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ in this case it will be the "^" symbol starting before the regex is matching the begining of the string and the "$" which matching the end of the string the regex pattern is applied to. 
 
 ### Quantifiers
   Quantifiers are used to quantify how many times a part of your regular expression should be repeated.  Every time you want to repeat something in a regex (an individual character, a character class or a sub-expression) you can write a quantifier after it to specify how many times it should be repeated.  The following list shows some examples of the most common quantifiers: ?, *, +, {N}, {,N}, {N,}, {N,M}. For example, the regular expression /\d{4}/ matches a four-digit number. It is the same as /\d\d\d\d/.
@@ -61,18 +61,12 @@ The following are additional examples of character classes that are not found in
 
 
 ### Grouping and Capturing
-   Grouping constructs delineate the subexpressions of a regular expression and capture the substrings of an input string. You can use grouping constructs to do the following:
-1. Match a subexpression that is repeated in the input string. 2. Apply a quantifier to a subexpression that has multiple regular expression language elements. For more information about quantifiers, see Quantifiers. 3. Include a subexpression in the string that is returned by the Regex.Replace and Match.Result methods. 4. Retrieve individual subexpressions from the Match.Groups property and process them separately from the matched text as a whole. 
+   Grouping constructs delineate the subexpressions of a regular expression and capture the substrings of an input string. You can use grouping constructs to do the following:  1. Match a subexpression that is repeated in the input string. 2. Apply a quantifier to a subexpression that has multiple regular expression language elements. For more information about quantifiers, see Quantifiers. 3. Include a subexpression in the string that is returned by the Regex.Replace and Match.Result methods. 4. Retrieve individual subexpressions from the Match.Groups property and process them separately from the matched text as a whole. 
 
   You can access captured groups in four ways: A. By using the backreference construct within the regular expression. The matched subexpression is referenced in the same regular expression by using the syntax \number, where number is the ordinal number of the captured subexpression. B. By using the named backreference construct within the regular expression. The matched subexpression is referenced in the same regular expression by using the syntax \k<name>, where name is the name of a capturing group, or \k<number>, where number is the ordinal number of a capturing group. A capturing group has a default name that is identical to its ordinal number. For more information, see Named matched subexpressions later in this topic. C. By using the $number replacement sequence in a Regex.Replace or Match.Result method call, where number is the ordinal number of the captured subexpression. D. Programmatically, by using the GroupCollection object returned by the Match.Groups property. The member at position zero in the collection represents the entire regular expression match. Each subsequent member represents a matched subexpression. For more information, see the Grouping Constructs and Regular Expression Objects section.
 
 ### Bracket Expressions
-Bracket expressions are special characters that match one character out of a set of characters, just like regular character classes. it can match any charactr in the set thats inside if the [] brackets in my example its matcching a-z lowercase and range 0-9, _ and aswell as - character and the same will apply for the brackets in group two and three. 
-
-
-### Greedy and Lazy Match
-A greedy quantifier always attempts to repeat the sub-pattern as many times as possible before exploring shorter matches by backtracking. And a lazy quantifier always attempt to repeat the sub-pattern as few times as possible, before exploring longer matches by expansion. Exmaple of them in my code is the + symbol thats matching the previous token between one and unlimited times, as many times possible giving back as needed (greedy).
-
+  Bracket expressions are special characters that match one character out of a set of characters, just like regular character classes. it can match any charactr in the set thats inside if the [] brackets in my example its matcching a-z lowercase and range 0-9, _ and aswell as - character and the same will apply for the brackets in group two and three.
 
 ## Author
 
