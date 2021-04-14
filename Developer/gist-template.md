@@ -72,8 +72,16 @@ The following are additional examples of character classes that are not found in
 
 A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
 
+ Find me on GitHub: [emilychhun](https://github.com/emilychhun)
+ <br />
 
-https://github.com/emilychhun/Regex-Tutorial
-<br />
-https://github.com/emilychhun
-<br />
+  Email me with any questions: emily_chhun23@yahoo.com
+  <br />
+  
+  Repo Link: [repo-link](https://github.com/emilychhun/Regex-Tutorial)
+  <br />
+ 
+ Link Gist: [Link-Gist](https://github.com/emilychhun/Regex-Tutorial)
+ <br />
+
+
