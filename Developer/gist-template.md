@@ -38,6 +38,11 @@ Everyone must have filled an online form at some stage, a form usually asks for 
 * `a+?a{2,}?`	 -match as few as possible
 * `ab|cd`	    -match ab or cd
 
+Possessive Quantifiers Disable Backtracking.  
+
+There are occasionally situations where you'd like a quantifier to try and greedily match as many times as possible, but also to never give up any of the characters it has already matched, and instead fail the overall match instead of trying to backtrack.  For example, consider the process of trying to match this regex: a{1,10}aaaaaaaaaaX.
+ In this case, the '{1,10}' quantifier is 'greedy', so it will go ahead and try to consume as many 'a' characters as it's allowed to before moving on to the next pattern.  It just so happens, that the pattern after this quantifier also consists of a long string of 'a's, and there aren't enough 'a' to share between both parts of the pattern!  In fact, the regex engine will first try the entire search by choosing 10 'a's, only realizing at the 'Z' character that it made a mistake.  Then it tries again with 9, then with 8 and so on until it tries to consume 1, and only then does it realize that the entire pattern won't match and fail. In this case, a 'possessive' quantifier can be used to speed up the process of failure.  It does this by disabling the ability to 'backtrack' and re-attempt the rest of the match with one less repetition.  For this use case of possessive quantifiers, we're only concerned with speeding up failing matches rather than matching something different. 
+     
 ### OR Operator
 
 * `|` Acts like a boolean OR. Matches the expression before or after the |.
