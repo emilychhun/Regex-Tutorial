@@ -81,7 +81,7 @@ A short section about the author with a link to the author's GitHub profile (rep
   Repo Link: [repo-link](https://github.com/emilychhun/Regex-Tutorial)
   <br />
  
- Link Gist: [Link-Gist](https://github.com/emilychhun/Regex-Tutorial)
+ Link Gist: [Link-Gist](https://gist.github.com/emilychhun/f07331ac54644f285cd80c9e0fb4f41f)
  <br />
 
 
