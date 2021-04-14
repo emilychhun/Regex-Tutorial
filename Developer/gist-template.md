@@ -70,8 +70,6 @@ The following are additional examples of character classes that are not found in
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
-
  Find me on GitHub: [emilychhun](https://github.com/emilychhun)
  <br />
 
