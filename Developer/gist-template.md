@@ -74,4 +74,6 @@ A short section about the author with a link to the author's GitHub profile (rep
 
 
 https://github.com/emilychhun/Regex-Tutorial
+<br />
 https://github.com/emilychhun
+<br />
