@@ -25,8 +25,8 @@ Everyone must have filled an online form at some stage, a form usually asks for 
 
 ### Quantifiers
   Quantifiers are used to quantify how many times a part of your regular expression should be repeated. If users want to repeat a part in a regular expression such as an individual character, a character class or a sub-expression, they can write a quantifier after it to specify how many times it should be repeated. For example, the regular expression /\d{4}/ matches a four-digit number. It is the same as /\d\d\d\d/. The following list shows some examples of the most common quantifiers: ? (Repeated from 0 to 1 times), * (Repeated from 0 to Infinity times), + (Repeated from 1 to Infinity times), {N} (Repeated from N to N times), {,N} (Repeated from 0 to N times), {N,} (Repeated from N to Infinity times), and {N,M} (Repeated from N to M times). 
-  A quantifire can be greedy or lazy that is explained below.
-
+  
+  A quantifire can be greedy or lazy-As Many/Few As Possible that is explained below.
 * `a*a+a?`	-0 or more, 1 or more, 0 or 1
     * "+" Matches 1 or more of the preceding token.
     * "*" Matches 0 or more of the preceding token.
